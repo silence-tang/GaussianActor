@@ -1,12 +1,26 @@
 # [AAAI 2025] Official Implementation of 3D$^2$-Actor: Learning Pose-Conditioned 3D-Aware Denoiser for Realistic Gaussian Avatar Modeling
 
-## Environment
-
-- 3DGS related
-  - Clone AnimatableGaussians and place `gaussians` under `GaussianActor/`.
-  - `cd gaussians/diff_gaussian_rasterization_depth_alpha`
-  - `python setup.py install`
-  - `cd ../..`
+## Installation
+1. Clone this repo.
+```
+git clone https://github.com/silence-tang/GaussianActor.git
+```
+2. Install environments.
+```
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
+(Install pytorch3d) Please download a proper version of pytorch3d from pytorch.org and install locally.
+pip install pytorch_lightning==2.0.2
+pip install lightning==2.0.2
+pip install opencv-python scikit-image matplotlib einops packaging spconv pytorch-fid==0.3.0 lpips==0.1.4 tensorboard==2.12.0
+(NOTE) If a module is missing, please install it manually based on the error message.
+```
+3. Install 3DGS module
+```
+Clone AnimatableGaussians and place gaussians under GaussianActor/.
+cd gaussians/diff_gaussian_rasterization_depth_alpha
+python setup.py install
+cd ../..
+```
 
 ## ZJU-MoCap Dataset
 
