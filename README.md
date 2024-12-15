@@ -7,6 +7,8 @@ git clone https://github.com/silence-tang/GaussianActor.git
 ```
 2. Install environments.
 ```
+conda create -n gaussianactor python=3.10
+conda activate gaussianactor
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2
 (Install pytorch3d) Please download a proper version of pytorch3d from pytorch.org and install locally.
 pip install pytorch_lightning==2.0.2
@@ -17,6 +19,7 @@ pip install opencv-python scikit-image matplotlib einops packaging spconv pytorc
 3. Install 3DGS module
 ```
 Clone AnimatableGaussians and place gaussians under GaussianActor/.
+cd GaussianActor
 cd gaussians/diff_gaussian_rasterization_depth_alpha
 python setup.py install
 cd ../..
