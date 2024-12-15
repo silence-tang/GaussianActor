@@ -32,3 +32,24 @@ cd ../..
 ## SMPL/SMPL-X Data
 
 - Please download the preprocessed SMPL/SMPL-X data from the [huggingface space](https://huggingface.co/datasets/PolarisT/zjumocap/tree/main), `place body_models.zip` under `GaussianActor/` and finally unzip it.
+
+## Train 2D model
+```
+cd full
+CUDA_VISIBLE_DEVICES=0 python train_2d_v1_ok_zju.py
+```
+
+## Train 3D model
+```
+CUDA_VISIBLE_DEVICES=0 python train_v14_5_1_zju_lr5e-5.py
+```
+
+## Test
+```
+(NOTE) You need to place the pretrained 2D/3D modeles (ckpt files) under GaussianActor/ckpt.
+CUDA_VISIBLE_DEVICES=0 python test_v16_zju_np.py
+```
+
+## Notes
+- You may try to enable DDP or mixed-precision training (mix-16) to accelerate the training process.
+
