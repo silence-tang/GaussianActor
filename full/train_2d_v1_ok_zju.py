@@ -88,7 +88,7 @@ if __name__ == "__main__":
         # strategy='ddp_find_unused_parameters_true',
         accelerator='gpu',
         # precision='16-mixed',
-        devices=1,
+        devices=0,
         default_root_dir=root_dir,
         callbacks=[checkpoint_callback],
         check_val_every_n_epoch=check_val_every_n_epoch,
