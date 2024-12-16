@@ -33,13 +33,13 @@ cd ../..
 
 - Please download the preprocessed SMPL/SMPL-X data from the [huggingface space](https://huggingface.co/datasets/PolarisT/zjumocap/tree/main), `place body_models.zip` under `GaussianActor/` and finally unzip it.
 
-## Train 2D model
+## Train the 2D denoiser
 ```
 cd full
 CUDA_VISIBLE_DEVICES=0 python train_2d_v1_ok_zju.py
 ```
 
-## Train 3D model
+## Train the 3D rectifier
 ```
 CUDA_VISIBLE_DEVICES=0 python train_v14_5_1_zju_lr5e-5.py
 ```
