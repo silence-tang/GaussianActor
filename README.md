@@ -18,7 +18,7 @@ pip install opencv-python scikit-image matplotlib einops packaging spconv pytorc
 ```
 3. Install 3DGS module
 ```
-Clone AnimatableGaussians and place gaussians under GaussianActor/.
+git clone AnimatableGaussians and place directory gaussians under GaussianActor/.
 cd GaussianActor
 cd gaussians/diff_gaussian_rasterization_depth_alpha
 python setup.py install
@@ -31,7 +31,7 @@ cd ../..
 
 ## SMPL/SMPL-X Data
 
-- Please download the preprocessed SMPL/SMPL-X data from the [huggingface space](https://huggingface.co/datasets/PolarisT/zjumocap/tree/main), `place body_models.zip` under `GaussianActor/` and finally unzip it.
+- Please download the preprocessed SMPL/SMPL-X data from the [huggingface space](https://huggingface.co/datasets/PolarisT/zjumocap/tree/main), place `body_models.zip` under `GaussianActor/` and finally unzip it.
 
 ## Train the 2D denoiser
 ```
@@ -46,7 +46,7 @@ CUDA_VISIBLE_DEVICES=0 python train_v14_5_1_zju_lr5e-5.py
 
 ## Test
 ```
-(NOTE) You need to place the pretrained 2D/3D modeles (ckpt files) under GaussianActor/ckpt.
+(NOTE) You need to place the pretrained 2D/3D modeles (ckpt files) under `GaussianActor/ckpt`.
 CUDA_VISIBLE_DEVICES=0 python test_v16_zju_np.py
 ```
 
